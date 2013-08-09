@@ -15,9 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network
   config.ssh.forward_agent = true
 
-  config.vm.synced_folder "roots/", "/srv/
+  config.vm.synced_folder "roots/", "/srv/"
 
   config.vm.provision :salt do |salt|
     salt.minion_config = "minion.conf"
-  end 
+    salt.run_highstate = true
+  end
 end

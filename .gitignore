@@ -16,3 +16,7 @@ tmp
 .yardoc
 _yardoc
 doc/
+.vagrant
+*~
+roots/salt/*
+roots/pillar/*
