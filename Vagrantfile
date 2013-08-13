@@ -10,9 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-  # config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.network :private_network, ip: "192.168.33.10"
 
-  config.vm.network :public_network
+  # config.vm.network :public_network
   config.ssh.forward_agent = true
 
   config.vm.synced_folder "roots/", "/srv/"
