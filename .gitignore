@@ -20,3 +20,4 @@ doc/
 *~
 roots/salt/*
 roots/pillar/*
+roots/grain/*
