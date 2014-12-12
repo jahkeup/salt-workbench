@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -eou pipefail
+name=saltrunner
+set -x
+docker build -t $name .
+docker run --rm -ti -v $(pwd)/config:/srv $name $@
+
